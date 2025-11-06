@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(40%_40%_at_50%_0%,rgba(99,102,241,0.18),transparent)]" />
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
-          <p className="text-white/60">© {new Date().getFullYear()} Your Name. All rights reserved.</p>
+          <p className="text-white/60">© {new Date().getFullYear()} ahmd zian. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <a href="#" aria-label="GitHub" className="rounded p-2 text-white/70 transition hover:bg-white/10 hover:text-white">
               <Github className="h-5 w-5" />

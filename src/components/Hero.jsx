@@ -1,5 +1,6 @@
 import React from 'react';
 import Spline from '@splinetool/react-spline';
+import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (
@@ -7,7 +8,7 @@ export default function Hero() {
       {/* Spline scene */}
       <div className="absolute inset-0">
         <Spline
-          scene="https://prod.spline.design/wwTRdG1D9CkNs368/scene.splinecode"
+          scene="https://prod.spline.design/xzUirwcZB9SOxUWt/scene.splinecode"
           style={{ width: '100%', height: '100%' }}
         />
       </div>
@@ -19,17 +20,44 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative mx-auto flex max-w-6xl flex-col items-center px-6 pt-24 pb-16 text-center md:pt-32">
-        <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1 text-xs tracking-wide text-white/80 backdrop-blur">
+        <motion.span
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+          className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1 text-xs tracking-wide text-white/80 backdrop-blur"
+        >
           <span className="h-2 w-2 rounded-full bg-indigo-400" />
-          Personal Brand • Creative Technologist
-        </span>
-        <h1 className="mt-6 bg-gradient-to-br from-indigo-300 via-sky-300 to-fuchsia-300 bg-clip-text text-4xl font-[800] leading-tight text-transparent md:text-6xl">
-          Showcase your work with a bold, futuristic presence
-        </h1>
-        <p className="mt-4 max-w-2xl text-white/70 md:text-lg">
-          A modern portfolio with interactive 3D hero, quick uploads, and an elegant blue–purple gradient aesthetic.
-        </p>
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+          Photographer • Creative Technologist
+        </motion.span>
+
+        <motion.h1
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.1, ease: 'easeOut' }}
+          className="mt-6 text-4xl font-[800] leading-tight md:text-6xl"
+        >
+          <span className="bg-gradient-to-br from-indigo-300 via-sky-300 to-fuchsia-300 bg-clip-text text-transparent">
+            ahmd zian
+          </span>
+          <br />
+          <span className="text-white/90">Modern photography — cinematic, minimalist, bold.</span>
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2, ease: 'easeOut' }}
+          className="mt-4 max-w-2xl text-white/70 md:text-lg"
+        >
+          A modern portfolio with an interactive 3D cover, quick uploads, and an elegant blue–purple gradient aesthetic.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.3, ease: 'easeOut' }}
+          className="mt-8 flex flex-wrap items-center justify-center gap-3"
+        >
           <a
             href="#upload"
             className="rounded-full bg-gradient-to-r from-indigo-500 to-fuchsia-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-900/30 transition hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-indigo-400"
@@ -42,7 +70,15 @@ export default function Hero() {
           >
             View gallery
           </a>
-        </div>
+        </motion.div>
+
+        {/* Animated accent underline */}
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 1, delay: 0.5, ease: 'easeOut' }}
+          className="mt-8 h-px w-40 origin-left bg-gradient-to-r from-indigo-400/70 via-sky-400/70 to-fuchsia-400/70"
+        />
       </div>
     </section>
   );
